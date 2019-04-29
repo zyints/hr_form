@@ -36,6 +36,8 @@ input
   </div>
 </template>
 <script>
+
+
 export default {
   data () {
     return {
@@ -53,7 +55,6 @@ export default {
   },
   watch: {
     phone(val) {
-      console.log(val.length);
       if(val.length > 11){
         this.errorFlag = true;
       } else if(val.length === 11) {
@@ -64,7 +65,9 @@ export default {
   methods: {
     gotoPage() {
       if(this.name.length > 0 && this.phoneFlag){
-        window.location="/form/list"
+        this.$store.commit('update', {name: this.name, phone: this.phone});
+        console.log(this.$store.stare);
+        this.$router.push('/form/list')
       } else if(this.name.length === 0 && !this.phoneFlag){
         this.errorType = 'all';
         this.errorFlag = true;
@@ -76,6 +79,8 @@ export default {
         this.errorFlag = true;
       }
     }
+  },
+  mounted () {
   }
 }
 </script>

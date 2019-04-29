@@ -55,6 +55,7 @@
 </template>
 <script>
 import anime from 'animejs';
+// import axios from "@nuxtjs/axios";
 
 export default {
   data () {
@@ -98,6 +99,15 @@ export default {
       bottonFlag: true,
       anime: {
         translateX: 0,
+      },
+      pushForm: {
+        name: this.$store.state.name,
+        phone: this.$store.state.phone,
+        A: 0,
+        B: 0,
+        C: 0,
+        D: 0,
+        E: 0,
       }
     }
   },
@@ -167,13 +177,32 @@ export default {
       let D = this.submitList[8] + this.submitList[11] + this.submitList[18] + this.submitList[22] + this.submitList[26];
       let E = this.submitList[9] + this.submitList[13] + this.submitList[17] + this.submitList[23] + this.submitList[29];
       console.log('结果', A, B, C, D, E);
+      this.pushForm.A = A;
+      this.pushForm.B = B;
+      this.pushForm.C = C;
+      this.pushForm.D = D;
+      this.pushForm.E = E;
+      this.postForm();
+    },
+    postForm() {
+      let _pushForm = this.pushForm
+      console.log(this.$axios);
+      this.$axios.post('https://strapi.stark.wiki/hr/question/', _pushForm)
+      .then((res) => {
+        console.log(res)
+      })
     }
   },
   mounted () {
     // alert(window.innerWidth);
     let _test = window.innerWidth;
+    if(this.$store.state.name.length === 0 && this.$store.state.phone.length === 0 ){
+      this.$router.push('/form')
+    }
     // this.anime.translateX = 375 * 29 / 2;
-    console.log(window.innerWidth);
-  }
+    // console.log(window.innerWidth);
+    // console.log(this.$store.state);
+  },
+
 }
 </script>
