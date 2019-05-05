@@ -56,7 +56,8 @@
 <script>
 import anime from 'animejs';
 // import axios from "@nuxtjs/axios";
-const prefix = '/ts/hr';
+const prefix = '';
+// const prefix = '/ts/hr';
 export default {
   data () {
 
