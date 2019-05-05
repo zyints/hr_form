@@ -197,12 +197,11 @@ export default {
     // alert(window.innerWidth);
     let _test = window.innerWidth;
     if(this.$store.state.name.length === 0 && this.$store.state.phone.length === 0 ){
-      this.$router.push('/form')
+      this.$router.push('./pdp/')
     }
     // this.anime.translateX = 375 * 29 / 2;
     // console.log(window.innerWidth);
     // console.log(this.$store.state);
   },
-
 }
 </script>
