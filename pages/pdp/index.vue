@@ -21,7 +21,7 @@
                 style="text-align: center;"
             >PS: 测试结果无好坏对错之分,仅用于匹配度和面谈参考之用。尽可能真实快速作答</h5>
         </section>
-        <nuxt-link to="./pdp/enrollment">
+        <nuxt-link to="/ts/hr/pdp/enrollment">
             <div>
                 <svg
                     t="1556341450544"

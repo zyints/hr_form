@@ -37,7 +37,7 @@ input
 </template>
 <script>
 
-
+const prefix = '/ts/hr';
 export default {
   data () {
     return {
@@ -67,7 +67,7 @@ export default {
       if(this.name.length > 0 && this.phoneFlag){
         this.$store.commit('update', {name: this.name, phone: this.phone});
         console.log(this.$store.stare);
-        this.$router.push('./list')
+        this.$router.push(prefix + '/pdp/list')
       } else if(this.name.length === 0 && !this.phoneFlag){
         this.errorType = 'all';
         this.errorFlag = true;

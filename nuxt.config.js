@@ -55,10 +55,10 @@ module.exports = {
     ** You can extend webpack config here
     */
    extend (config, { isDev, isClient }) {
-      if (!isDev) {
-        // relative links, please.
-        config.output.publicPath = './_nuxt/'
-      }
+      // if (!isDev) {
+      //   // relative links, please.
+      //   config.output.publicPath = '/_nuxt/'
+      // }
       return config;
     }
   }

@@ -56,7 +56,7 @@
 <script>
 import anime from 'animejs';
 // import axios from "@nuxtjs/axios";
-
+const prefix = '/ts/hr';
 export default {
   data () {
 
@@ -197,7 +197,7 @@ export default {
     // alert(window.innerWidth);
     let _test = window.innerWidth;
     if(this.$store.state.name.length === 0 && this.$store.state.phone.length === 0 ){
-      this.$router.push('./pdp/')
+      this.$router.push(prefix + '/pdp/')
     }
     // this.anime.translateX = 375 * 29 / 2;
     // console.log(window.innerWidth);
