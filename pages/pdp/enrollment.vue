@@ -67,7 +67,7 @@ export default {
       if(this.name.length > 0 && this.phoneFlag){
         this.$store.commit('update', {name: this.name, phone: this.phone});
         console.log(this.$store.stare);
-        this.$router.push('/form/list')
+        this.$router.push('/pdp/list')
       } else if(this.name.length === 0 && !this.phoneFlag){
         this.errorType = 'all';
         this.errorFlag = true;
