@@ -57,8 +57,12 @@ export default {
     phone(val) {
       if(val.length > 11){
         this.errorFlag = true;
+        this.phoneFlag = false;
       } else if(val.length === 11) {
         this.phoneFlag = true;
+      } else if(val.length < 11) {
+        this.errorFlag = false;
+        this.phoneFlag = false;
       }
     }
   },
