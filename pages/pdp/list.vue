@@ -172,11 +172,11 @@ export default {
       }
     },
     statistics() {
-      let A = this.submitList[6] + this.submitList[10] + this.submitList[15] + this.submitList[20] + this.submitList[25];
-      let B = this.submitList[7] + this.submitList[14] + this.submitList[16] + this.submitList[24] + this.submitList[27];
-      let C = this.submitList[5] + this.submitList[12] + this.submitList[19] + this.submitList[21] + this.submitList[28];
-      let D = this.submitList[8] + this.submitList[11] + this.submitList[18] + this.submitList[22] + this.submitList[26];
-      let E = this.submitList[9] + this.submitList[13] + this.submitList[17] + this.submitList[23] + this.submitList[29];
+      let A = this.submitList[0] + this.submitList[6] + this.submitList[10] + this.submitList[15] + this.submitList[20] + this.submitList[25];
+      let B = this.submitList[1] + this.submitList[7] + this.submitList[14] + this.submitList[16] + this.submitList[24] + this.submitList[27];
+      let C = this.submitList[2] + this.submitList[5] + this.submitList[12] + this.submitList[19] + this.submitList[21] + this.submitList[28];
+      let D = this.submitList[3] + this.submitList[8] + this.submitList[11] + this.submitList[18] + this.submitList[22] + this.submitList[26];
+      let E = this.submitList[4] + this.submitList[9] + this.submitList[13] + this.submitList[17] + this.submitList[23] + this.submitList[29];
       console.log('结果', A, B, C, D, E);
       this.pushForm.A = A;
       this.pushForm.B = B;
