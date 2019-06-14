@@ -188,7 +188,7 @@ export default {
     postForm() {
       let _pushForm = this.pushForm
       console.log(this.$axios);
-      this.$axios.post('https://api.zyints.cn/hr/question/', _pushForm)
+      this.$axios.post('http://ml-dm.eziyan.top/api/hrForm/', _pushForm)
       .then((res) => {
         console.log(res)
       })
